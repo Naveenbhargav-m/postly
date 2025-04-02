@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { User, Lock, Bell, Globe, Moon, Shield, LogOut, Save, Camera } from 'lucide-react';
+import { ScrollContainer } from '../components/scrolllContainer';
 
 const UserProfileSettingsScreen = () => {
   const [activeTab, setActiveTab] = useState('profile');
@@ -19,6 +20,7 @@ const UserProfileSettingsScreen = () => {
   };
 
   return (
+
     <div className="max-w-6xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">Profile & Settings</h1>
@@ -78,6 +80,7 @@ const UserProfileSettingsScreen = () => {
         </div>
 
         {/* Main Content Area */}
+        <ScrollContainer maxHeight='90vh' style={{height:"90%"}}>
         <div className="flex-1 bg-white rounded-lg shadow-md p-6">
           {/* Profile Information Tab */}
           {activeTab === 'profile' && (
@@ -511,6 +514,8 @@ const UserProfileSettingsScreen = () => {
             </div>
           )}
         </div>
+        </ScrollContainer>
+
       </div>
     </div>
   );
