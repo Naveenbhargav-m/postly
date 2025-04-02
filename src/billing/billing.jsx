@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CreditCard, Calendar, Shield, CheckCircle, Award, HelpCircle, AlertCircle } from 'lucide-react';
+import { ScrollContainer } from '../components/scrolllContainer';
 
 const SubscriptionBillingScreen = () => {
   const [currentPlan, setCurrentPlan] = useState('Pro');
@@ -27,6 +28,7 @@ const SubscriptionBillingScreen = () => {
   ];
 
   return (
+    <ScrollContainer style={{height:"90%"}} maxHeight='80%' >
     <div className="max-w-6xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">Subscription & Billing</h1>
@@ -220,6 +222,7 @@ const SubscriptionBillingScreen = () => {
         </div>
       </div>
     </div>
+    </ScrollContainer>
   );
 };
 
